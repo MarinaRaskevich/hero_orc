@@ -2,7 +2,7 @@
 require_once '../helpers/Hero.php';
 require_once '../helpers/Orc.php';
 
-$hero = new Hero(1500, 0, 'Épée', 150, 'Bouclier', 450);
+$hero = new Hero(1300, 0, 'Épée', 150, 'Bouclier', 450);
 $orc = new Orc(250, 0);
 // $orc->attack();
 // echo ($orc->getDamage());
