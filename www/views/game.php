@@ -1,5 +1,5 @@
 <div class="container-fluid h-100 pt-3">
-    <div class="row gx-3 pt-3 h-100">
+    <div class="row gx-3 pt-4 h-100">
         <div class="col-4 h-100" id="hero">
             <img src="/public/assets/img/medival_knight.png" alt="héro" id="imgHero">
         </div>
