@@ -3,7 +3,7 @@ body {
   font-family: "Cinzel", serif;
   background-image: url(/public/assets/img/bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -15,12 +15,12 @@ img {
 }
 
 .zoomed {
-  transform: scale(1.1); /* Увеличивает изображение на 20% */
+  transform: scale(1.1);
   filter: drop-shadow(0 15px 10px rgba(206, 175, 38, 0.5));
 }
 
 .dezoomed {
-  transform: scale(0.9); /* Увеличивает изображение на 20% */
+  transform: scale(0.9);
 }
 
 #gameName {
@@ -73,6 +73,9 @@ p {
 }
 
 .modal-content {
-  background-color: #795649;
-  color: #f4e5c3;
+  background-image: url(/public/assets/img/bg-modal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: #795649; */
+  color: #000000;
 }

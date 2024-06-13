@@ -3,22 +3,19 @@ const imageOrc = document.querySelector("#imgOrc");
 const gameResult = document.querySelector("#gameResult");
 const modal = document.querySelector(".modal-body");
 const btnModal = document.querySelector(".btn-modal");
-const heroDiv = document.querySelector(".hero_information div");
-const orcDiv = document.querySelector(".orc_information div");
 
 let counterHero = 0;
 let counterOrc = 0;
 
 battle.addEventListener("click", function () {
-  fetch("data.php")
+  fetch("game-data-ctrl.php")
     .then((response) => response.json())
     .then((data) => {
       winner(data.winner);
       gameSteps(data.gameSteps);
-      heroOrcInformation(data.hero, data.orc);
     })
     .catch((error) => {
-      console.error("Ошибка:", error);
+      console.error(error);
     });
 });
 
@@ -51,9 +48,4 @@ const gameSteps = (gameResults) => {
   gameResults.forEach((result) => {
     modal.innerHTML += result;
   });
-};
-
-const heroOrcInformation = (hero, orc) => {
-  heroDiv.innerHTML = hero;
-  orcDiv.innerHTML = orc;
 };
