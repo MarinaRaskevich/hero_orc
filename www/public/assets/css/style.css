@@ -7,18 +7,8 @@ body {
   height: 100vh;
 }
 
-.hero_information,
-.orc_information {
-  height: 50%;
-  margin-top: -88%;
-  position: relative;
-  background-image: url(/public/assets/img/pngtree-old-paper-scroll-vintage-png-image_6445645.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
 img {
-  height: 100%;
+  height: 520px;
   width: 83%;
   filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.5));
   transition: transform 0.4s ease;
@@ -29,12 +19,22 @@ img {
   filter: drop-shadow(0 15px 10px rgba(206, 175, 38, 0.5));
 }
 
+.dezoomed {
+  transform: scale(0.9); /* Увеличивает изображение на 20% */
+}
+
 #gameName {
-  font-size: 3rem;
+  font-size: 3.8rem;
 }
 
 #gameResult {
-  color: #176b10;
+  color: #795649;
+  text-shadow: 3px 2px 2px #c0a080;
+  font-size: 2.5rem;
+}
+
+.btn-modal:hover {
+  text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.257);
 }
 
 p {
@@ -49,23 +49,30 @@ p {
   margin-top: 0;
 }
 
-button {
-  display: inline-block;
+#battle {
   padding: 10px 20px;
-  font-family: "Cinzel", serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
+  background-color: #795649;
+  color: #f4e5c3;
+  border: 2px solid #c0a080;
+  font-size: 18px;
+  text-shadow: 1px 1px 0px #a67c52;
+  box-shadow: 2px 2px 0px #a67c52;
+  border-radius: 4px;
   cursor: pointer;
-  border: 2px solid #8b4513;
-  background-color: #d2b48c;
-  color: #000;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #8b4513;
-  color: #fff;
+#battle:hover {
+  background-color: #8a6e2f;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+#battle:active {
+  box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
+}
+
+.modal-content {
+  background-color: #795649;
+  color: #f4e5c3;
 }
