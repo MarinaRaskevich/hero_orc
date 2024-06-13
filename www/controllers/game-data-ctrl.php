@@ -6,7 +6,7 @@ $hero = new Hero(1300, 0, 'Épée', 150, 'Bouclier', 450);
 $orc = new Orc(250, 0);
 
 $gameResults = [];
-$result = '<div class="d-flex justify-content-between"><div>Héro: ' . $hero->__toString() . '</div><div>Orc: ' . $orc->__toString() . '</div></div>';
+$result = '<div class="d-flex justify-content-between fw-bold"><div>Héro: ' . $hero->__toString() . '</div><div>Orc: ' . $orc->__toString() . '</div></div>';
 array_push($gameResults, $result);
 
 while ($orc->getHealth() > 0 && $hero->getHealth() > 0) {
@@ -34,12 +34,12 @@ while ($orc->getHealth() > 0 && $hero->getHealth() > 0) {
     }
 };
 
-$isHeroWin = $orc->getHealth() == 0 ? true : false;
+$isHeroWinner = $orc->getHealth() == 0 ? true : false;
 
 
 $data = [
-    'gameSteps' => $gameResults,
-    'winner' => $isHeroWin,
+    'gameResults' => $gameResults,
+    'winner' => $isHeroWinner,
 ];
 
 echo json_encode($data);

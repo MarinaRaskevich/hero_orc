@@ -8,7 +8,7 @@ body {
 }
 
 img {
-  height: 520px;
+  height: 90%;
   width: 83%;
   filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.5));
   transition: transform 0.4s ease;
@@ -76,6 +76,5 @@ p {
   background-image: url(/public/assets/img/bg-modal.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: #795649; */
   color: #000000;
 }

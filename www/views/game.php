@@ -1,6 +1,6 @@
 <div class="container-fluid h-100 pt-3">
-    <div class="row gx-3 h-100">
-        <div class="col-4 pt-3" id="hero">
+    <div class="row gx-3 pt-3 h-100">
+        <div class="col-4 h-100" id="hero">
             <img src="/public/assets/img/medival_knight.png" alt="héro" id="imgHero">
         </div>
         <div class="col-4 d-flex flex-column align-items-center">
@@ -11,7 +11,7 @@
             <div class="fw-bold pt-5 mt-5" id="gameResult"></div>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-modal d-none" data-bs-toggle="modal" data-bs-target="#modal">
-                Afficher des informations sur cette bataille
+                Afficher la progression de cette bataille
             </button>
 
             <!-- Modal -->
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 pt-3" id="orc">
+        <div class="col-4 h-100" id="orc">
             <img src="/public/assets/img/orc.png" alt="orc" id="imgOrc">
         </div>
     </div>

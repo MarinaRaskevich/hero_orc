@@ -12,7 +12,7 @@ battle.addEventListener("click", function () {
     .then((response) => response.json())
     .then((data) => {
       winner(data.winner);
-      gameSteps(data.gameSteps);
+      gameSteps(data.gameResults);
     })
     .catch((error) => {
       console.error(error);

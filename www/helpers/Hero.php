@@ -79,7 +79,7 @@ class Hero extends Character
 
         // Exercice 8
         $this->rage = $this->rage + 30;
-        //Réduction de la capacité de l'armure après chaque attaque (1/10 des dégâts de l'orc).
-        $this->shieldValue = $this->shieldValue - round($damage / 10);
+        //Réduction de la capacité de l'armure après chaque attaque (1/15 des dégâts de l'orc).
+        $this->shieldValue = $this->shieldValue - round($damage / 15);
     }
 }
