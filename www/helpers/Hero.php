@@ -20,7 +20,7 @@ class Hero extends Character
 
     public function __toString()
     {
-        return '<p>Niveau de santé: ' . $this->health . '</p><p>Niveau de rage: ' . $this->rage . '</p><p>Le nom de l\'arme équipée: ' . $this->weapon . '</p><p>Les dégâts basiques de l\'arme: ' . $this->weaponDamage . '</p><p>Le nom de l\'armure équipée: ' . $this->shield . '</p><p>Le nombre de dégâts que l\'armure encaisse à la place du héros: ' . $this->shieldValue . '</p>';
+        return "<p>Niveau de santé: <span>$this->health</span>.</p><p>Niveau de rage: <span>$this->rage</span>.</p> <p>Arme: <span>$this->weapon</span>.</p><p>Dégâts de l'arme: <span>$this->weaponDamage</span>.</p> <p>Armure équipée: <span>$this->shield</span>.</p><p>Capacité d'armure: <span>$this->shieldValue</span>.</p>";
     }
 
     //Exercice 5
