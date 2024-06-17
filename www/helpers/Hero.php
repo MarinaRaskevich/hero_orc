@@ -1,14 +1,24 @@
 <?php
-require_once 'Character.php';
+// require_once 'Character.php';
 
 class Hero extends Character
 {
-    private string $weapon; //le nom de l'arme équipée
-    private int $weaponDamage; //les dégâts basiques de l'arme
-    private string $shield; //le nom de l'armure équipée
-    private int $shieldValue; //le nombre de dégâts que l'armure encaisse à la place du héros
+    private string $weapon;
+    private int $weaponDamage;
+    private string $shield;
+    private int $shieldValue;
 
     //Exercice 6
+    /**
+     * Undocumented function
+     *
+     * @param integer $health | Répresente la vie du personnage
+     * @param integer $rage | Répresente la rage du personnage
+     * @param string $weapon | le nom de l'arme équipée
+     * @param integer $weaponDamage | les dégâts basiques de l'arme
+     * @param string $shield | le nom de l'armure équipée
+     * @param integer $shieldValue | le nombre de dégâts que l'armure encaisse à la place 
+     */
     public function __construct(int $health, int $rage, string $weapon, int $weaponDamage, string $shield, int $shieldValue)
     {
         parent::__construct($health, $rage);
@@ -69,16 +79,16 @@ class Hero extends Character
 
 
     // Exercice 7
-    public function attacked($damage)
+    public function attacked($damage): void
     {
         $trueDamage = $damage - $this->shieldValue;
-        $this->health = $this->health - $trueDamage;
+        $this->health = $this->health - $trueDamage; //$this->health -= $trueDamage;
         if ($this->health < 0) {
             $this->health = 0;
         }
 
         // Exercice 8
-        $this->rage = $this->rage + 30;
+        $this->rage = $this->rage + 30; // $this->rage += 30;
         //Réduction de la capacité de l'armure après chaque attaque (1/15 des dégâts de l'orc).
         $this->shieldValue = $this->shieldValue - round($damage / 15);
     }

@@ -1,9 +1,10 @@
 <?php
-require_once '../helpers/Hero.php';
-require_once '../helpers/Orc.php';
+require __DIR__ . '/../helpers/Character.php';
+require __DIR__ . '/../helpers/Hero.php';
+require __DIR__ . '/../helpers/Orc.php';
 
-$hero = new Hero(1300, 0, 'Épée', 150, 'Bouclier', 450);
-$orc = new Orc(250, 0);
+$hero = new Hero(health: 1300, rage: 0, weapon: 'Épée', weaponDamage: 150, shield: 'Bouclier', shieldValue: 450);
+$orc = new Orc(health: 250, rage: 0);
 
 $gameResults = [];
 $result = '<div class="d-flex justify-content-between fw-bold"><div>Héro: ' . $hero->__toString() . '</div><div>Orc: ' . $orc->__toString() . '</div></div>';
@@ -11,10 +12,11 @@ array_push($gameResults, $result);
 
 while ($orc->getHealth() > 0 && $hero->getHealth() > 0) {
     $orc->attack();
-    $hero->attacked($orc->getDamage());
+    $damageOrc = $orc->getDamage();
+    $hero->attacked($damageOrc);
 
     $result = '<div class="my-2 fs-4">Orc déclenche une attaque!</div>
-    <div>Dégâts d\'Orc: ' . $orc->getDamage() . '</div>
+    <div>Dégâts d\'Orc: ' . $damageOrc . '</div>
     <div>Hero:</div>
     <div>Niveau de santé: ' . $hero->getHealth() . '</div>
     <div>Niveau de rage: ' . $hero->getRage() . '</div>

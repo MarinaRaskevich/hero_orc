@@ -1,5 +1,5 @@
 <?php
-require_once 'Character.php';
+// require_once 'Character.php';
 
 class Orc extends Character
 {
@@ -34,7 +34,7 @@ class Orc extends Character
     }
 
     //Exercice 15
-    public function attacked($damage)
+    public function attacked($damage): void
     {
         $this->health = $this->health - $damage;
         if ($this->health < 0) {
